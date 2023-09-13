@@ -1,0 +1,3420 @@
+{
+    "variable": [
+        {
+            "id": "baseUrl",
+            "key": "baseUrl",
+            "type": "string",
+            "name": "string",
+            "value": "localhost"
+        }
+    ],
+    "info": {
+        "name": "Laravel",
+        "_postman_id": "c51584f2-dda6-446f-9b27-dd90a08fabb0",
+        "description": "",
+        "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
+    },
+    "item": [
+        {
+            "name": "Admin Controller-1",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get All Users' Info",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/getAllUsersInfo",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/admin\/getAllUsersInfo"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This function to return all users with all their info"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "\"All_Users_info\": [\n{\n\"id\": 1,\n\"name\": \"electa.reilly\",\n\"email\": \"bbauch@example.com\",\n\"email_verified_at\": \"2021-08-25T19:01:58.000000Z\",\n\"phone\": \"812.867.3712\",\n\"birth_day\": \"2002-10-25\",\n\"age\": 1366,\n\"gender\": \"Male\",\n\"image\": \"https:\/\/via.placeholder.com\/640x480.png\/00bb22?text=ut\",\n\"reports\": 7,\n\"ban\": 0,\n\"ban_count\": 780,\n\"certified\": 1,\n\"VIP\": 0,\n\"created_at\": \"2021-08-25T01:47:16.000000Z\",\n\"updated_at\": \"2021-08-25T11:09:25.000000Z\",\n\"mac_address\": \"lWWFYF2V8P\",\n\"id_number\": \"cb2a52b5-e196-31c4-9b88-08c73069151d\",\n\"online\": 0\n},\n{\n\"id\": 2,\n\"name\": \"bashirian.misael\",\n\"email\": \"jayde.langosh@example.org\",\n\"email_verified_at\": \"2021-08-25T09:44:09.000000Z\",\n\"phone\": \"(564) 298-5747\",\n\"birth_day\": \"1977-11-20\",\n\"age\": 8846844,\n\"gender\": \"Male\",\n\"image\": \"https:\/\/via.placeholder.com\/640x480.png\/00dd00?text=veritatis\",\n\"reports\": 579,\n\"ban\": 1,\n\"ban_count\": 5495324,\n\"certified\": 0,\n\"VIP\": 0,\n\"created_at\": \"2021-08-25T19:13:52.000000Z\",\n\"updated_at\": \"2013-10-29T15:06:04.000000Z\",\n\"mac_address\": \"gk9F0GFdaT\",\n\"id_number\": \"a887f7d1-f4b2-3f07-ba3f-c36c3b498e2b\",\n\"online\": 0\n}]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "show list of users",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/getAllUsersByMethod",
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "15",
+                                    "description": "The id of the user.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "name",
+                                    "value": "voluptatem",
+                                    "description": "The name of the user.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "itaque",
+                                    "description": "The email of the user.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "gender",
+                                    "value": "aut",
+                                    "description": "The gender of the user.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "dateOfCreation",
+                                    "value": "est",
+                                    "description": "timestamp The date of creation .",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "birthdayDate",
+                                    "value": "ducimus",
+                                    "description": "date The birthday_Date of the user.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "VIP",
+                                    "value": "13",
+                                    "description": "'1' to get VIP users.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "age",
+                                    "value": "17",
+                                    "description": "The age of the user.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/admin\/getAllUsersByMethod?id=15&name=voluptatem&email=itaque&gender=aut&dateOfCreation=est&birthdayDate=ducimus&VIP=13&age=17"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This function to return list of users with their info with any (one)(required) method as input\n(id, full name,age, email, VIP ( (int = 1) to get VIP users),\ngender ( Female or Male),  date of creation(timestamp), birthday(date))"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"msg\": \"users are found by This email\",\n\"Users_info\": [\n{\n\"id\": 1,\n\"name\": \"electa.reilly\",\n\"email\": \"bbauch@example.com\",\n\"email_verified_at\": \"2021-08-25T19:01:58.000000Z\",\n\"phone\": \"812.867.3712\",\n\"birth_day\": \"2002-10-25\",\n\"age\": 1366,\n\"gender\": \"Male\",\n\"image\": \"https:\/\/via.placeholder.com\/640x480.png\/00bb22?text=ut\",\n\"reports\": 7,\n\"ban\": 0,\n\"ban_count\": 780,\n\"certified\": 1,\n\"VIP\": 0,\n\"created_at\": \"2021-08-25T01:47:16.000000Z\",\n\"updated_at\": \"2021-08-25T11:09:25.000000Z\",\n\"mac_address\": \"lWWFYF2V8P\",\n\"id_number\": \"cb2a52b5-e196-31c4-9b88-08c73069151d\",\n\"online\": 0\n}\n]\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"msg\": \" No users are found by This name\",\n\"Users_info\": []\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Banning fake users",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/banningFakeUser",
+                            "query": [
+                                {
+                                    "key": "user_id",
+                                    "value": "1",
+                                    "description": "The id of the user.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/admin\/banningFakeUser?user_id=1"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This function to delete user's account with his\/her id (required)"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"msg\": \"Ban has been done successfully by deleting the account of this user\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n\"msg\": \"no user found by This id \",\n\"status\": 400\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Show all reports",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/getAllReports",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/admin\/getAllReports"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This function to show all reports with all details ( with action = 0 ) that no action taken on it yet"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"AllReports_info\": [\n{\n\"id\": 1,\n\"message_id\": 1,\n\"details\": \"Consectetur ut ut nihil ea voluptatibus reiciendis iste tempore. Dolores aut possimus perspiciatis ut est fugiat dolore. Id quo voluptas et voluptatem ab aliquam. Consequuntur est aspernatur animi dolor repellat placeat dolores.\",\n\"action\": 0,\n\"created_at\": \"2021-08-26T15:19:47.000000Z\",\n\"updated_at\": \"2021-08-26T00:00:00.000000Z\"\n},\n{\n\"id\": 2,\n\"message_id\": 2,\n\"details\": \"Accusantium repellat omnis possimus. Id voluptatibus voluptas facilis iusto. Molestias nostrum a dolores perspiciatis officiis. Omnis ut quae quo itaque explicabo est.\",\n\"action\": 0,\n\"created_at\": \"1977-01-22T00:00:00.000000Z\",\n\"updated_at\": \"2004-01-27T00:00:00.000000Z\"\n},\n{\n\"id\": 3,\n\"message_id\": 3,\n\"details\": \"Quo consequatur ad eos sunt. Et aut odit necessitatibus tempora quos sequi omnis. Non nisi eum consequuntur fugit cum pariatur reiciendis. Velit quo in qui error.\",\n\"action\": 0,\n\"created_at\": \"2005-07-17T00:00:00.000000Z\",\n\"updated_at\": \"2008-05-06T00:00:00.000000Z\"\n}\n],\n\"status\": 200\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Take action on actual reports",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/admin\/takeActionOnReport",
+                            "query": [
+                                {
+                                    "key": "report_id",
+                                    "value": "6",
+                                    "description": "The id of the user.",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "action_type",
+                                    "value": "15",
+                                    "description": "The id of the user.",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/admin\/takeActionOnReport?report_id=6&action_type=15"
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This function to take action on report with  input 'report_id' (int) required to do report on it\nand input 'action_type' (int) required to know what action to do\naction_type can be = 1 || 2 || 3 || 4\n( (1) for no action\nor (2) for removing the report from the user\nor (3) for banning user\nor (4) for temp banning user for limited time (weekly checks to remove the ban from him))\n\nfor banning the user (3) it checks if ban counts exceeds 20 then the account of this user will be deleted"
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"msg\": \"Action has been taken successfully by banning the user\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n\"msg\": \"choose action to be taken on this report\",\n\"status\": 400\n}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Admin Controller 2",
+            "description": "APIs for admin",
+            "item": [
+                {
+                    "name": "Admin Login",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login\/Admin",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/login\/Admin"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"username\":\"aya\",\"password\":\"ayasameh123\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"message\": \"logged in successfully\",\n \"AccessToken:\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpblwvQWRtaW4iLCJpYXQiOjE2Mjk3OTU4MDYsImV4cCI6MTYyOTc5OTQwNiwibmJmIjoxNjI5Nzk1ODA2LCJqdGkiOiJGeGNIRmFXa2FpNnQ0eldVIiwic3ViIjoyMywicHJ2IjoiZGY4ODNkYjk3YmQwNWVmOGZmODUwODJkNjg2YzQ1ZTgzMmU1OTNhOSJ9.qUBMQCRrE3n-t-EDhu0HJpxOJUJqpxvXl7UIXObzpt0\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n \"message\": \"No such admin user, invalid username or password\"\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\"\n \"Errors in\":{\"username\":[\"The username field is required.\"]}\n}",
+                            "name": "failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get All Questions and Answers",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getAllQuestionsandAnswers",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/getAllQuestionsandAnswers"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint lets you get all questions."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "[\n    [\n        {\n            \"question\": {\n                \"id\": 1,\n                \"question\": \"Twinkle, twinkle--\\\"' Here the Queen left off, quite out of a procession,' thought she, 'if people had all to lie down on her face brightened up again.) 'Please your Majesty,' said the Hatter, with.\",\n                \"gender\": \"Female\",\n                \"created_at\": \"2000-07-03T00:00:00.000000Z\",\n                \"updated_at\": \"2008-11-22T00:00:00.000000Z\"\n            },\n            \"answers\": [\n                {\n                    \"id\": 1,\n                    \"question_id\": 1,\n                    \"answer\": \"Alice whispered to the shore, and then quietly marched off after the birds! Why, she'll eat a little queer, won't you?' 'Not a bit,' said the Cat, and vanished again. Alice waited till the eyes.\",\n                    \"created_at\": \"1981-02-21T00:00:00.000000Z\",\n                    \"updated_at\": \"1972-05-08T00:00:00.000000Z\"\n                }\n            ]\n        }\n    ]\n]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Users to be Certified",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getUserCertifiedToBe",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/getUserCertifiedToBe"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint lets you get the Users who requested to be certified."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n   \"body\": [\n       {\n           \"user\": [\n               {\n                   \"id\": 2,\n                   \"name\": \"tdoyle\",\n                   \"email\": \"brandon.schmidt@example.org\",\n                   \"email_verified_at\": \"2021-09-02T09:28:05.000000Z\",\n                   \"phone\": \"1-567-717-3728\",\n                   \"birth_day\": \"1996-06-03\",\n                   \"age\": 28.5,\n                   \"gender\": \"Male\",\n                   \"answered\": 1,\n                   \"image\": \"https:\/\/via.placeholder.com\/640x480.png\/00cccc?text=ut\",\n                   \"reports\": 156,\n                   \"ban\": 0,\n                   \"ban_count\": 1073385,\n                   \"certified\": 1,\n                   \"VIP\": 0,\n                   \"created_at\": \"2021-09-02T01:45:50.000000Z\",\n                   \"updated_at\": \"2010-12-02T18:24:33.000000Z\",\n                   \"id_number\": \"89b8cedc-43fa-3876-8e1c-6903be456628\",\n                   \"online\": 1\n               }\n           ]\n       },\n       {\n           \"user\": [\n               {\n                   \"id\": 8,\n                   \"name\": \"tyler.grimes\",\n                   \"email\": \"bcrona@example.org\",\n                   \"email_verified_at\": \"2021-09-02T21:56:41.000000Z\",\n                   \"phone\": \"+12796902924\",\n                   \"birth_day\": \"1990-10-15\",\n                   \"age\": 83.8,\n                   \"gender\": \"Male\",\n                   \"answered\": 1,\n                   \"image\": \"https:\/\/via.placeholder.com\/640x480.png\/006688?text=magnam\",\n                   \"reports\": 188892190,\n                   \"ban\": 0,\n                   \"ban_count\": 85657,\n                   \"certified\": 1,\n                   \"VIP\": 1,\n                   \"created_at\": \"2021-09-02T23:08:25.000000Z\",\n                   \"updated_at\": \"1977-10-21T00:37:57.000000Z\",\n                   \"id_number\": \"628b2308-0cb0-3c55-8096-69851ec0e27b\",\n                   \"online\": 0\n               }\n           ]\n       }\n   ]\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"No users found!\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Create Question",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/createQuestion",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/createQuestion"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"question\":\"eos\",\"gender\":\"incidunt\"}"
+                        },
+                        "description": "This endpoint lets you create a new question to be asked to the user."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"Question added successfully!\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\",\n\"Errors in\": {\n\"question\": [\n    \"The question field is required.\"\n]\n}\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Edit Question",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/editQuestion",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/editQuestion"
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"id\":4,\"question\":\"et\",\"gender\":\"omnis\"}"
+                        },
+                        "description": "This endpoint lets you edit a question to be asked to the user."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"Question edited successfully!\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\",\n\"Errors in\": {\n\"question\": [\n    \"The question field is required.\"\n]\n}\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"Question Not Found!\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete Question",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/deleteQuestion",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/deleteQuestion"
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"id\":7}"
+                        },
+                        "description": "This endpoint lets you delete a question to be asked to the user."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"Question deleted successfully!\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"Question Not Found!\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\",\n\"Errors in\": {\n\"question\": [\n    \"The id field is required.\"\n]\n}\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Add Suggested Answer",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/addSuggestedAnswer",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/addSuggestedAnswer"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"question_id\":20,\"answer\":\"placeat\"}"
+                        },
+                        "description": "This endpoint lets you add a suggested answer to a question."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"Answer added successfully!\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\",\n\"Errors in\": {\n\"question\": [\n    \"The question_id field is required.\"\n]\n}\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"Question Not Found!\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Edit Suggested Answer",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/editSuggestedAnswer",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/editSuggestedAnswer"
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"answer_id\":2,\"answer\":\"consequatur\",\"id\":18}"
+                        },
+                        "description": "This endpoint lets you edit an answer to a question."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"Answer edited successfully!\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\",\n\"Errors in\": {\n\"question\": [\n    \"The answer field is required.\"\n]\n}\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"Answer Not Found!\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete Suggested Answer",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/deleteSuggestedAnswer",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/deleteSuggestedAnswer"
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"answer_id\":5,\"id\":8}"
+                        },
+                        "description": "This endpoint lets you delete an answer to a question."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"Answer deleted successfully!\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"Answer Not Found!\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\",\n\"Errors in\": {\n\"question\": [\n    \"The answer_id field is required.\"\n]\n}\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get User Certifiable data",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getUserCertifiableData",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/getUserCertifiableData"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint lets you get the data that the user provided the app with to be certified   Body Parameter: user_id int required The id of said user."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"body\": [\n {\n\"id\": 9,\n\"user_id\": 9,\n\"image\": \"https:\/\/via.placeholder.com\/640x480.png\/008811?text=laboriosam\",\n\"created_at\": \"2021-09-01T23:05:37.000000Z\",\n \"updated_at\": \"2021-09-01T00:00:00.000000Z\"\n},\n{\n\"id\": 10,\n\"user_id\": 9,\n\"image\": \"https:\/\/via.placeholder.com\/640x480.png\/008811?text=laboriosam\",\n\"created_at\": \"2021-09-02T12:25:10.000000Z\",\n\"updated_at\": \"-000001-11-30T00:00:00.000000Z\"\n}\n]\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"User Not Found!\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\",\n\"Errors in\": {\n\"question\": [\n    \"The user_id field is required.\"\n]\n}\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete Certification request",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/deleteCertificationRequest",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/deleteCertificationRequest"
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"user_id\":2}"
+                        },
+                        "description": "This endpoint lets you delete the user that is already certified from the UserCertification Table."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"Request deleted successfully!\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\",\n\"Errors in\": {\n\"question\": [\n    \"The user_id field is required.\"\n]\n}\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n\"message\": \"User Not Found!\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Certify User",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/certifyUser",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/certifyUser"
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"user_id\":14}"
+                        },
+                        "description": "This endpoint lets you certify a user when their certification data has been checked and validated."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"User certified successfully!\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\",\n\"Errors in\": {\n\"question\": [\n    \"The user_id field is required.\"\n]\n}\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 409,
+                            "body": "{\n\"message\": \"User already certified!\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Number of Online Users",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getNumOfOnlineUsers",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/getNumOfOnlineUsers"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint lets you get the number of online users."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"body\": 5\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Number of Chats",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getNumOfChats",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/getNumOfChats"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint lets you get total number of chats between users."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"body\": 5\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Number of Requests",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getNumOfRequests",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/getNumOfRequests"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint lets you get number of chat requests of (free) users."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"body\": 5\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Number of Reports",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getNumOfReports",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/getNumOfReports"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint lets you get number of reports made by users."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"body\": 5\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Number of Banned Users",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getNumOfBannedUsers",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/getNumOfBannedUsers"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint lets you get number of users that are temporarily banned."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"body\": 5\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Number of Blocks",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getNumOfBlocks",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/getNumOfBlocks"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint lets you get number of blocks."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"body\": 5\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Number of Favs",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getNumOfFavs",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/getNumOfFavs"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint lets you get number of favourites."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"body\": 5\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Admin registeration",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/register\/Admin",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/register\/Admin"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"username\":\"aya\",\"password\":\"ayasameh123\",\"super_admin\":0}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\n \"message\": \"New admin is created successfully, you can now login\",\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 401,
+                            "body": "{\n \"message\": \"you are not a super admin\"\n}",
+                            "name": "unauthorized"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\"\n \"Errors in\":{\"username\":[\"The username field is required.\"]}\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"New admin creation failed, please check the data passed\"\n}",
+                            "name": "failed"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Authentication",
+            "description": "",
+            "item": [
+                {
+                    "name": "User register request",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/register",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/register"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "aya",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "aya@gmail.com",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password",
+                                    "value": "ayasameh123",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "phone",
+                                    "value": "01234567899",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "gender",
+                                    "value": "female",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "birth_day",
+                                    "value": "1999-11-09",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "password_confirmation",
+                                    "value": "ayasameh123",
+                                    "type": "text"
+                                },
+                                {
+                                    "key": "image",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\n \"message\":\"Successfully created your account, just verify it at your email !\",\n \"user\":{\"name\":\"ayadA1\",\"email\":\"ayadA@gmail.com\",\"phone\":\"01234567899\",\n \"gender\":\"female\",\"birth_day\":\"1999-11-09\",\"age\":21,\"reports\":0,\"ban\":0,\n \"ban_count\":0,\"VIP\":0,\"certified\":0,\"mac_address\":\"9E-4E-36-D3-D0-20 \\\\Device\\\\Tcpip_{4DBEE7F7-37E0-401A-B6C5-3EEFD760542C}\",\n \"updated_at\":\"2021-08-22T09:27:57.000000Z\",\"created_at\":\"2021-08-22T09:27:57.000000Z\",\"id\":21},\n \"AccessToken:\":\"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9yZWdpc3RlciIsImlhdCI6MTYyOTYyNDQ5MSwiZXhwIjoxNjI5NjI4MDkxLCJuYmYiOjE2Mjk2MjQ0OTEsImp0aSI6InVHTFY3ZEwzUVRSNGJSRUoiLCJzdWIiOjIxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.wkJgQT7RwycOA_3asmK8kdMRvV4UMpGXpeB2GBu6t0s\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 403,
+                            "body": "{\n \"message\": \"Invalid, you used this device before !!\"\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\"\n \"Errors in\":{\"email\":[\"The email field is required.\"]}\n}",
+                            "name": "failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "User Login",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"aya@gmail.com\",\"password\":\"ayasameh123\",\"remember\":true}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"message\": \"logged in successfully\"\n \"AccessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTczOTEwNiwiZXhwIjoxNjI5NzQyNzA2LCJuYmYiOjE2Mjk3MzkxMDYsImp0aSI6IjZtQWFzSDhkVFFiOTNZeFUiLCJzdWIiOjIxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.97UdgcALxqA5EMcRRZp5q0zDx-fKDiNwc-DwUMaUlHc\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n \"message\": \"No such user, invalid email or password\"\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\"\n \"Errors in\":{\"email\":[\"The email field is required.\"]}\n}",
+                            "name": "failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "Forget password request",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/forgot-password",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/forgot-password"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"aya@gmail.com\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"message\": \"Reset password link sent successfully\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n \"message\": \"No such user\"\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\"\n \"Errors in\":{\"email\":[\"The email field is required.\"]}\n}",
+                            "name": "failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "New password request",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/reset-password",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/reset-password"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"token\":\"68d43b6b3ea9d817a1fdc0ea4fa25d2f4c42f91f47ae5525b95e41ef87ab6c30\",\"email\":\"aya@gmail.com\",\"password\":\"ayasameh123\",\"password_confirmation\":\"ayasameh123\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"message\": \"Your password has been reset!\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\n \"message\": \"No such user\"\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\"\n \"Errors in\":{\"email\":[\"The email field is required.\"]}\n}",
+                            "name": "failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "Confirm the user's password",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/confirm-password",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/confirm-password"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"message\": \"Password Confirmed\"\n}",
+                            "name": "success"
+                        }
+                    ]
+                },
+                {
+                    "name": "User Logout",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/logout",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/logout"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"message\": \"logged out successfully\"\n}",
+                            "name": "success"
+                        }
+                    ]
+                },
+                {
+                    "name": "Verify user's email address",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/verify-email\/:id\/:hash",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/verify-email\/:id\/:hash",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "17",
+                                    "description": "The id of the user."
+                                },
+                                {
+                                    "id": "hash",
+                                    "key": "hash",
+                                    "value": "72aa8d4285d697a6f82edd86fe9e29e039dea408",
+                                    "description": "the hashed token."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"message\": \"Email Verified\"\n}",
+                            "name": "success"
+                        }
+                    ]
+                },
+                {
+                    "name": "Send a new email verification notification",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/email\/verification-notification",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/email\/verification-notification"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"message\": \"Successfully Verified\"\n}",
+                            "name": "success"
+                        }
+                    ]
+                },
+                {
+                    "name": "User Logout",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/logout\/Admin",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/logout\/Admin"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"message\": \"logged out successfully\"\n}",
+                            "name": "success"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Block Controller",
+            "description": "This class has the following features:\n1- create block for user.\n2- remove a block.\n3- retrieve all blocks.",
+            "item": [
+                {
+                    "name": "This function to crate block for specific user.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/blockFriend",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/blockFriend"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"reciever_id\":17}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\": \"Block Created Successfully\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "This function to retrieve all blocks.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getAllBlocks",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/getAllBlocks"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"blocks\": [\n{\n\"id\": 12,\n\"blocker_id\": 1,\n\"blocked_id\": 10,\n\"created_at\": \"1974-05-06T00:00:00.000000Z\",\n\"updated_at\": \"2008-08-29T00:00:00.000000Z\"\n}]}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "This function to remove blocked user.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/removeBlock",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/removeBlock"
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"blockId\":7,\"blockerId\":14,\"blockedId\":6}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "status = \"201\" {\"message\" : \"Block has been Deleted Successfully\"}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "status = \"400\"",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Chat Controller",
+            "description": "",
+            "item": [
+                {
+                    "name": "Start New Chat",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/startchat",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/startchat"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"userid2\":6}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "\"user : \": 12,\n  \"successfully started chat with user : \": \"9\",\n  \"Chat details :\": {\n     \"user_1\": 12,\n      \"user_2\": \"9\",\n     \"updated_at\": \"2021-08-25T21:05:48.000000Z\",\n      \"created_at\": \"2021-08-25T21:05:48.000000Z\",\n      \"id\": 17\n }\n}",
+                            "name": "succes{"
+                        },
+                        {
+                            "header": [],
+                            "code": 405,
+                            "body": "{\n     \"Request between user : \": 12,\n     \"and user : \": \"9\",\n     \"message\": \"isnot approved, cannot start chat\",\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n     \"message\": \"Invalid data\",\n      \"Errors in\": {\n          \"userid2\": [\n              \"The userid2 field is required.\"\n         ]\n      }\n}\n @response status=404 {\n     'msg' => 'no user found by This id '\n}\n @response status=404 {\n     'msg' => 'no request found between the 2 users'\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 403,
+                            "body": "{\n     'msg' => 'you blocked this user, cannot start chat'\n}\n @response {\n     'msg' => 'this user blocked you,  cannot start chat'\n}",
+                            "name": "failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "Send New Msg",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/sendmsg",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/sendmsg"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"chat_id\":10,\"content\":\"non\",\"replymsg\":5}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "\"msg sent\"\n}",
+                            "name": "succes{"
+                        },
+                        {
+                            "header": [],
+                            "code": 405,
+                            "body": "{\n   \"can not send more than 4 msgs to this account\"\n}\n @response status=400 {\n     \"message\": \"Invalid data\",\n      \"Errors in\": {\n          \"userid2\": [\n              \"The chat_id field is required.\"\n         ]\n      }\n}\n  @response status=404 {\n     'msg' => 'no chat found by This id '\n}\n  @response status=403 {\n     'msg' => 'you blocked this user, cannot send msg'\n}\n @response status=403 {\n     'msg' => 'this user blocked you, cannot send msg'\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 405,
+                            "body": "{\n     'msg' => 'you dont have access to this chat'\n}",
+                            "name": "failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "Send New Pic",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/sendpic",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/sendpic"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"chat_id\":1,\"image\":\"sint\",\"content\":\"in\",\"replymsg\":14}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "\"pic sent\"\n}",
+                            "name": "succes{"
+                        },
+                        {
+                            "header": [],
+                            "code": 403,
+                            "body": "{\n   \"This feature isnot available for Free members\"\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n     \"message\": \"Invalid data\",\n      \"Errors in\": {\n          \"chat_id\": [\n              \"The chat_id field is required.\"\n         ]\n      }\n}\n  @response status=404 {\n     'msg' => 'no chat found by This id '\n}\n  @response status=403 {\n     'msg' => 'you blocked this user, cannot send msg'\n}\n @response status=403 {\n     'msg' => 'this user blocked you, cannot send msg'\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 405,
+                            "body": "{\n     'msg' => 'you dont have access to this chat'\n}",
+                            "name": "failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Number Of Msgs For Current User",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/numofmsgs",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/numofmsgs"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "4\n}",
+                            "name": "succes{"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Status Of Msg For Certain Msg",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/statusofmsgs\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/statusofmsgs\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "soluta",
+                                    "description": "The ID of the statusofmsg."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "'delivered'\n}\n @response status=404 scenario=\"failed\"{\n     'msg' => 'no msg found by This id '\n}",
+                            "name": "succes{"
+                        },
+                        {
+                            "header": [],
+                            "code": 403,
+                            "body": "{\n    \" msg status isn't correct\"\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 403,
+                            "body": "{\n    \" you arenot the sender of this msg \"\n}",
+                            "name": "failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "Delete Msg",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/deletemsg\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/deletemsg\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "voluptas",
+                                    "description": "The ID of the deletemsg."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "\"msg is deleted successfully \"\n}\n @response scenario=\"failed\"{\n     'msg' => 'no msg found by This id '\n}\n @response status=403 scenario=\"failed\"{\n    \" you arenot the sender of this msg \"\n}",
+                            "name": "succes{"
+                        },
+                        {
+                            "header": [],
+                            "code": 403,
+                            "body": "{\n    \" msg status isn't correct\"\n}",
+                            "name": "failed"
+                        }
+                    ]
+                },
+                {
+                    "name": "Msg Seen",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/readmsg",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/readmsg"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"chat_id\":4,\"time\":\"molestiae\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n     \"message\": \"Invalid data\",\n      \"Errors in\": {\n          \"chat_id\": [\n              \"The chat_id field is required.\"\n         ]\n      }\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "'msgs seen'\n}\n @response status=404 scenario=\"failed\"{\n     'msg' => 'no chat found by This id '\n}",
+                            "name": "succes{"
+                        }
+                    ]
+                },
+                {
+                    "name": "Get List Of User's Chats",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/listallchats",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/listallchats"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "[\n     {\n          \"name\": \"nrogahn\",\n          \"image\": \"https:\/\/via.placeholder.com\/640x480.png\/008866?text=magni\",\n          \"user_id\": 1,\n          \"chat_id\": 10,\n          \"online\": 1,\n          \"content\": \"HE was.' 'I never could abide figures!' And with that she had looked under it, and yet it was too slippery; and when she had not gone (We know it to the beginning again?' Alice ventured to say.\",\n          \"created_at\": \"2021-09-15T14:01:42.000000Z\",\n          \"status\": 0,\n          \"sender_id\": 11,\n          \"sender_name\": \"omniaO30\",\n         \"unreadcount\": 0\n     },\n  ]",
+                            "name": "succes{"
+                        }
+                    ]
+                },
+                {
+                    "name": "Fetch Msgs from certain Chat",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/fetchmsgs\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/fetchmsgs\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "molestiae",
+                                    "description": "The ID of the fetchmsg."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "[\n     {\n         \"id\": 10,\n         \"chat_id\": 10,\n         \"sender_id\": 1,\n         \"sender_name\": \"zreichert\",\n         \"reciever_id\": 11,\n         \"reciever_name\": \"omniaO30\",\n         \"content\": \"What would become of it; so, after hunting all about it!' Last came a rumbling of little Alice herself, and nibbled a little feeble, squeaking voice, ('That's Bill,' thought Alice,) 'Well, I should.\",\n         \"status\": 52,\n         \"isImg\": null,\n         \"replyMsg\": null,\n         \"created_at\": \"2021-09-20T16:30:48.000000Z\",\n         \"reply_id\": \"\",\n         \"reply_chat_id\": \"\",\n         \"reply_sender_id\": \"\",\n         \"reply_sender_name\": \"\",\n         \"reply_reciever_id\": \"\",\n         \"reply_reciever_name\": \"\",\n         \"reply_content\": \"\",\n         \"reply_status\": \"\",\n        \"reply_isImg\": \"\",\n         \"reply_created_at\": \"\"\n     },\n ]\n}\n   @response scenario=\"failed\"{\n     'msg' => 'no chat found by This id '\n}",
+                            "name": "succes{"
+                        },
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "51"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "laravel_session=CA8IPpdvsRL1X4YxG9w8qSGn009Jl63PA1Cdj61B; expires=Fri, 24-Sep-2021 00:54:01 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 403,
+                            "body": "{\"message\":\"Un Authenticated\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Number Of Msgs Of Certain Chat For Current User",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/numofmsgsofcertainchat\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/numofmsgsofcertainchat\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "velit",
+                                    "description": "The ID of the numofmsgsofcertainchat."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "1\n}",
+                            "name": "succes{"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
+                {
+                    "name": "api\/profile",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/profile",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/profile"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "53"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "laravel_session=wKN5gc8yIxiFhs9VBeLoF4QybBAKRfAt1kiOChts; expires=Fri, 24-Sep-2021 00:53:58 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 403,
+                            "body": "{\"message\":\"Un Authenticated\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/user",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/user",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "50"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "laravel_session=y1u7qup1AvGPzYTyjgo3GeL1gR6aenxV3bh0A4ZM; expires=Fri, 24-Sep-2021 00:54:01 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 403,
+                            "body": "{\"message\":\"Un Authenticated\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Fav Controller",
+            "description": "This class has the following features:\n1- add someone to fav list.\n2- delete fav from fav table.\n3- retrieve all fav persons.",
+            "item": [
+                {
+                    "name": "This function to add someone to fav table.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/addFriend",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/addFriend"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"recevier_id\":15}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\" : \"You Add this user before\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "This function can retrieve alll persons from fav table.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getAllFriends",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/getAllFriends"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"User\": [\n{\n\"id\": 1,\n\"user_1\": 1,\n\"user_2\": 10,\n\"created_at\": \"1974-07-03T00:00:00.000000Z\",\n\"updated_at\": \"1981-01-31T00:00:00.000000Z\"\n},\n{\n\"id\": 11,\n\"user_1\": 1,\n\"user_2\": 3,\n\"created_at\": \"2021-08-17T19:25:55.000000Z\",\n\"updated_at\": \"2021-08-17T00:00:00.000000Z\"\n},\n{\n\"id\": 12,\n\"user_1\": 1,\n\"user_2\": 10,\n\"created_at\": \"1974-11-28T00:00:00.000000Z\",\n\"updated_at\": \"1971-09-05T00:00:00.000000Z\"\n},\n{\n\"id\": 22,\n\"user_1\": 1,\n\"user_2\": 10,\n\"created_at\": \"1995-11-18T00:00:00.000000Z\",\n\"updated_at\": \"2005-07-14T00:00:00.000000Z\"\n}\n]\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "This function can remove person from fav table.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/removeFromFav",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/removeFromFav"
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"id\":3}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\" : \"User has been Deleted Successfully\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "This function return all users who liked user profile.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/showAllLiked",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/showAllLiked"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "52"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "laravel_session=uFsmyrqOaY3D5b1y6I7L9irp0r6Rz2I10bzC61HH; expires=Fri, 24-Sep-2021 00:54:00 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 403,
+                            "body": "{\"message\":\"Un Authenticated\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Report Controller",
+            "description": "This class can Create report for message.",
+            "item": [
+                {
+                    "name": "This function to create report message",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/report",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/report"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"message_id\":9,\"details\":\"est\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\"message\" : \"report has been Created Successfully\"}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 404,
+                            "body": "{\"message\" : \"id of message not found\"}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\"message\" : \"You reported this message before!\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Request Controller",
+            "description": "this class can do the following features:\n1- Create request with another user.\n2- Update status of request from pending to accept and start chatting or refused it.\n3- Retrieve all requests\n4- delete request",
+            "item": [
+                {
+                    "name": "api\/getUser",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getUser",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/getUser"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "This function to create request with another user.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/request",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/request"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"recevier\":9}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "if you requested this user before\n{\"message\" : \"You Make this request before!\"}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\"message\" => \"Requests Created Successfully\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "This function to change status of request from pending to confirm .",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/decision",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/decision"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"sender\":4,\"replay\":4}"
+                        },
+                        "description": ".. etc."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\" : \"Requests Updated Successfully\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "this function to return all request for auth user.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/getAllRequests",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/getAllRequests"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"requests_sent\": [\n{\n\"id\": 1,\n\"sender_id\": 1,\n\"reciever_id\": 10,\n\"status\": 12,\n\"created_at\": \"1996-01-11T00:00:00.000000Z\",\n\"updated_at\": \"2007-10-29T00:00:00.000000Z\"\n},\n{\n\"id\": 11,\n\"sender_id\": 1,\n\"reciever_id\": 2,\n\"status\": 0,\n\"created_at\": \"2021-08-17T16:15:48.000000Z\",\n\"updated_at\": \"2021-08-17T00:00:00.000000Z\"\n},\n{\n\"id\": 18,\n\"sender_id\": 1,\n\"reciever_id\": 3,\n\"status\": 1,\n\"created_at\": \"2021-08-17T18:46:39.000000Z\",\n\"updated_at\": \"2021-08-17T00:00:00.000000Z\"\n},\n{\n\"id\": 19,\n\"sender_id\": 1,\n\"reciever_id\": 10,\n\"status\": 616849219,\n\"created_at\": \"1994-06-23T00:00:00.000000Z\",\n\"updated_at\": \"2006-10-09T00:00:00.000000Z\"\n},\n{\n\"id\": 29,\n\"sender_id\": 1,\n\"reciever_id\": 10,\n\"status\": 962946913,\n\"created_at\": \"2010-04-24T00:00:00.000000Z\",\n\"updated_at\": \"1982-06-13T00:00:00.000000Z\"\n}\n],\n\"requests_received\": [\n{\n\"id\": 28,\n\"sender_id\": 10,\n\"reciever_id\": 1,\n\"status\": 22,\n\"created_at\": \"1971-07-30T00:00:00.000000Z\",\n\"updated_at\": \"1998-01-19T00:00:00.000000Z\"\n},\n{\n\"id\": 38,\n\"sender_id\": 10,\n\"reciever_id\": 1,\n\"status\": 4060416,\n\"created_at\": \"1977-01-12T00:00:00.000000Z\",\n\"updated_at\": \"1973-04-20T00:00:00.000000Z\"\n}\n]\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "this function to delete specific user.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/deleteRequest",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/deleteRequest"
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"id\":3}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\"message\" : \"Requests has been Deleted Successfully\"}",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Socialization",
+            "description": "",
+            "item": [
+                {
+                    "name": "User Login\/Sign up with google redirect page.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/google",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/auth\/google"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "location",
+                                    "value": "https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=669321737133-0480hhddj82g3ndaoc7jh0dtdpbag774.apps.googleusercontent.com&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&scope=openid+profile+email&response_type=code&state=phone%3D%26gender%3D%26birth_day%3D"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "56"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "laravel_session=iKlhFK90qdUQsryGPVcIs8wCNYisXvuh2IJxvObP; expires=Fri, 24-Sep-2021 00:53:57 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 302,
+                            "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" \/>\n        <meta http-equiv=\"refresh\" content=\"0;url='https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=669321737133-0480hhddj82g3ndaoc7jh0dtdpbag774.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=phone%3D%26gender%3D%26birth_day%3D'\" \/>\n\n        <title>Redirecting to https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=669321737133-0480hhddj82g3ndaoc7jh0dtdpbag774.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=phone%3D%26gender%3D%26birth_day%3D<\/title>\n    <\/head>\n    <body>\n        Redirecting to <a href=\"https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=669321737133-0480hhddj82g3ndaoc7jh0dtdpbag774.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=phone%3D%26gender%3D%26birth_day%3D\">https:\/\/accounts.google.com\/o\/oauth2\/auth?client_id=669321737133-0480hhddj82g3ndaoc7jh0dtdpbag774.apps.googleusercontent.com&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Fgoogle%2Fcallback&amp;scope=openid+profile+email&amp;response_type=code&amp;state=phone%3D%26gender%3D%26birth_day%3D<\/a>.\n    <\/body>\n<\/html>",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "User Login\/Sign up with google handling.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/google\/callback",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/auth\/google\/callback"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"message\": \"logged in with google account successfully\"\n \"AccessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTczOTEwNiwiZXhwIjoxNjI5NzQyNzA2LCJuYmYiOjE2Mjk3MzkxMDYsImp0aSI6IjZtQWFzSDhkVFFiOTNZeFUiLCJzdWIiOjIxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.97UdgcALxqA5EMcRRZp5q0zDx-fKDiNwc-DwUMaUlHc\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\"\n \"Errors in\":{\"phone\":[\"The phone field is required.\"]}\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\n \"message\": \"Signed up with google account successfully\"\n \"AccessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTczOTEwNiwiZXhwIjoxNjI5NzQyNzA2LCJuYmYiOjE2Mjk3MzkxMDYsImp0aSI6IjZtQWFzSDhkVFFiOTNZeFUiLCJzdWIiOjIxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.97UdgcALxqA5EMcRRZp5q0zDx-fKDiNwc-DwUMaUlHc\"\n}",
+                            "name": "created"
+                        }
+                    ]
+                },
+                {
+                    "name": "User Login\/Sign up with facebook redirect page.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/facebook",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/auth\/facebook"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "location",
+                                    "value": "https:\/\/www.facebook.com\/v3.3\/dialog\/oauth?client_id=327456915746889&redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Ffacebook%2Fcallback&scope=email&response_type=code&state=phone%3D%26gender%3D%26birth_day%3D"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "55"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "laravel_session=eht2zA9Bb4QJ9zno1WqmxJfJ9Hi1Vc7oNzIPqetb; expires=Fri, 24-Sep-2021 00:53:57 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 302,
+                            "body": "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" \/>\n        <meta http-equiv=\"refresh\" content=\"0;url='https:\/\/www.facebook.com\/v3.3\/dialog\/oauth?client_id=327456915746889&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Ffacebook%2Fcallback&amp;scope=email&amp;response_type=code&amp;state=phone%3D%26gender%3D%26birth_day%3D'\" \/>\n\n        <title>Redirecting to https:\/\/www.facebook.com\/v3.3\/dialog\/oauth?client_id=327456915746889&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Ffacebook%2Fcallback&amp;scope=email&amp;response_type=code&amp;state=phone%3D%26gender%3D%26birth_day%3D<\/title>\n    <\/head>\n    <body>\n        Redirecting to <a href=\"https:\/\/www.facebook.com\/v3.3\/dialog\/oauth?client_id=327456915746889&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Ffacebook%2Fcallback&amp;scope=email&amp;response_type=code&amp;state=phone%3D%26gender%3D%26birth_day%3D\">https:\/\/www.facebook.com\/v3.3\/dialog\/oauth?client_id=327456915746889&amp;redirect_uri=http%3A%2F%2Flocalhost%3A8000%2Fapi%2Fauth%2Ffacebook%2Fcallback&amp;scope=email&amp;response_type=code&amp;state=phone%3D%26gender%3D%26birth_day%3D<\/a>.\n    <\/body>\n<\/html>",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "User Login\/Sign up with facebook handling.",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/auth\/facebook\/callback",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/auth\/facebook\/callback"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n \"message\": \"logged in with facebook account successfully\"\n \"AccessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTczOTEwNiwiZXhwIjoxNjI5NzQyNzA2LCJuYmYiOjE2Mjk3MzkxMDYsImp0aSI6IjZtQWFzSDhkVFFiOTNZeFUiLCJzdWIiOjIxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.97UdgcALxqA5EMcRRZp5q0zDx-fKDiNwc-DwUMaUlHc\"\n}",
+                            "name": "success"
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n \"message\": \"Invalid data\"\n \"Errors in\":{\"phone\":[\"The phone field is required.\"]}\n}",
+                            "name": "failed"
+                        },
+                        {
+                            "header": [],
+                            "code": 201,
+                            "body": "{\n \"message\": \"Signed up with facebook account successfully\"\n \"AccessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC8xMjcuMC4wLjE6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTczOTEwNiwiZXhwIjoxNjI5NzQyNzA2LCJuYmYiOjE2Mjk3MzkxMDYsImp0aSI6IjZtQWFzSDhkVFFiOTNZeFUiLCJzdWIiOjIxLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.97UdgcALxqA5EMcRRZp5q0zDx-fKDiNwc-DwUMaUlHc\"\n}",
+                            "name": "created"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "User controller",
+            "description": "this controller control in user's functions",
+            "item": [
+                {
+                    "name": "this function delete user and his chat history",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/delete",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/delete"
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "['message':'Your account has been deleted!']",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "certifiedUser takes images as a parameter",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/certified",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/certified"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "image[]",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "['message':'You are certified']",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "EditInfo Edit user's phone, profile image and his\/her answers",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/EditInfo",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/EditInfo"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "['message':'Updated successfully !!']",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "deleteImage delete user's profile image\nDelete user's image if he send request ''",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/deleteImage",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/deleteImage"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "['message':'Updated successfully !!']",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "User info ,questions and suggested answers",
+            "description": "\n\nAPIs for User info ,questions and suggested  features",
+            "item": [
+                {
+                    "name": "Get question by id",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get-question-by-id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/get-question-by-id"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"id\": 1,\n\"question\": \"Dinah, if I can go back and see how he can EVEN finish, if he would deny it too: but the Hatter with a lobster as a drawing of a feather flock together.\\\"' 'Only mustard isn't a bird,' Alice.\",\n\"gender\": \"Female\",\n\"created_at\": \"2007-02-15 00:00:00\",\n\"updated_at\": \"1999-10-15\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n\"message\": \"Invalid data\",\n\"0\": \"id field is required\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"id doesnt exist\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "api\/get-question-answers",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get-question-answers",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/get-question-answers"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "x-ratelimit-limit",
+                                    "value": "60"
+                                },
+                                {
+                                    "key": "x-ratelimit-remaining",
+                                    "value": "54"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                },
+                                {
+                                    "key": "set-cookie",
+                                    "value": "laravel_session=wHVSLmZxO6Q126LjqMmyVTm8H61QBX50j4z848k4; expires=Fri, 24-Sep-2021 00:53:58 GMT; Max-Age=7200; path=\/; httponly; samesite=lax"
+                                }
+                            ],
+                            "code": 403,
+                            "body": "{\"message\":\"Un Authenticated\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get all questions with it's answers",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/get-all-questions-with-answers",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/get-all-questions-with-answers"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "This endpoint lets you get all questions."
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "[\n    [\n        {\n            \"question\": {\n                \"id\": 1,\n                \"question\": \"Twinkle, twinkle--\\\"' Here the Queen left off, quite out of a procession,' thought she, 'if people had all to lie down on her face brightened up again.) 'Please your Majesty,' said the Hatter, with.\",\n                \"gender\": \"Female\",\n                \"created_at\": \"2000-07-03T00:00:00.000000Z\",\n                \"updated_at\": \"2008-11-22T00:00:00.000000Z\"\n            },\n            \"answers\": [\n                {\n                    \"id\": 1,\n                    \"question_id\": 1,\n                    \"answer\": \"Alice whispered to the shore, and then quietly marched off after the birds! Why, she'll eat a little queer, won't you?' 'Not a bit,' said the Cat, and vanished again. Alice waited till the eyes.\",\n                    \"created_at\": \"1981-02-21T00:00:00.000000Z\",\n                    \"updated_at\": \"1972-05-08T00:00:00.000000Z\"\n                }\n            ]\n        }\n    ]\n]",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "save",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/save-answer",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/save-answer"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"question_id\":8,\"answer\":\"corrupti\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n   \"message\":\"Answer is added successfully\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 400,
+                            "body": "{\n\"message\": \"Invalid data\",\n\"0\": \"fill the required fields\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"Question id doesnt exist\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"You answered this question before\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Show",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/show-user",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/show-user"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "[\n{\n\"question\": \"I shan't grow any more--As it is, I suppose?' said Alice. 'I don't see any wine,' she remarked. 'There isn't any,' said the March Hare moved into the garden. Then she went on. 'Would you tell me,'.\"\n},\n[\n\"answer\":\"No, I dont\"\n],\n[\n{\n\"question\": \"Dinah stop in the distance, screaming with passion. She had already heard her voice sounded hoarse and strange, and the reason they're called lessons,' the Gryphon replied very politely, 'if I had.\"\n},\n[\n{\n\"answer\": \"yess\"\n}\n]\n]",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"this user id doesnt exist\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Hide",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/hide",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/hide"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"Your question is hidden successfully\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"this question id doesnt exist\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Unhide",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/unhide",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/unhide"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"Your question is unhidden successfully\"\n}",
+                            "name": ""
+                        },
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "{\n\"message\": \"this question id doesnt exist\"\n}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Preference",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "api\/preference",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/api\/preference"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [],
+                            "code": 200,
+                            "body": "[\n{\n\"id\": 2,\n\"name\": \"stone88\",\n\"email\": \"schowalter.jannie@example.net\",\n\"email_verified_at\": \"2021-09-01T17:05:53.000000Z\",\n\"phone\": \"814-367-6631\",\n\"birth_day\": \"1979-06-02\",\n\"age\": 539,\n\"gender\": \"Female\",\n\"image\": \"https:\/\/via.placeholder.com\/640x480.png\/007744?text=rerum\",\n\"reports\": 62294,\n\"answered\": null,\n\"ban\": 0,\n\"ban_count\": 94,\n\"certified\": 0,\n\"VIP\": 0,\n\"created_at\": \"2021-09-01T06:55:48.000000Z\",\n\"updated_at\": \"1992-12-08T17:01:40.000000Z\",\n\"mac_address\": \"grIi2lS4eQ\",\n\"id_number\": \"d49cf2e9-8577-3ca6-963b-4611ccfe7790\",\n\"online\": 0\n}\n]",
+                            "name": ""
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "noauth"
+    }
+}
