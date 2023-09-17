@@ -51,6 +51,7 @@ class FavController extends Controller
                 return \response()->json(["message" => "You Blocked this user before you can't add him to fav table!"], 400);
             }
         }
+
         $getUser = User::where('id', '=', $request->recevier_id)->first();
         $user = new Fav();
         $user->user_1 = Auth::id();
@@ -134,7 +135,7 @@ class FavController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function showAllWhoSendLike()
-    {  
+    {
         return response()->json(Fav::where('user_2', '=', Auth::user()->id)->get());
     }
 }

@@ -130,7 +130,6 @@ class ChatController extends Controller
                         return response()->json(['Request between user : ' => Auth::user()->id, 'and user : ' => $request->userid2, 'message' => 'isnot approved, cannot start chat'], 405);
                     }
                 }
-
             }
 
         }
