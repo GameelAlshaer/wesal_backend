@@ -15,12 +15,6 @@ class MessageController extends Controller
 
     }
 
-    public function index(Request $request)
-    {
-        $users = User::where('id', '<>', $request->user()->id)->get();
-
-        return response()->json(['users' => $users]) ;
-    }
 
     public function chat(Request $request , $id)
     {

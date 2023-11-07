@@ -188,12 +188,10 @@ Route::group(['middleware' => 'admin' ], function(){
 // _________________________________________________________________________________________________________________
 // Twilio Chat APIs
     Route::group(['middleware' => ['auth','verified','QuestionsAreAnswered'] ], function(){
-        Route::get('/listUsers' , [MessageController::class,'index']);
         Route::get('/messages/{id}' , [MessageController::class,'chat']);
         Route::post('/test' , function (){
             return response()->json(['param' => \request()]) ;
         });
         Route::post('/token', [TokenController::class,'generate']);
     });
-//    Route::post('/token', [TokenController::class,'generate']);
 
